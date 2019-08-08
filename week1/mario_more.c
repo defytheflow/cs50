@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int prompt(void);
-void drawPyramid(int height);
+void draw_pyramid(int height);
 
 int main(void)
 {
@@ -25,7 +25,7 @@ int prompt(void)
 }
 
 // Displays a pyramid with user's height in the console.
-void drawPyramid(int height)
+void draw_pyramid(int height)
 {
     char hash = '#';
     int space = height - 1;
