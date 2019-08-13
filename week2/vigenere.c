@@ -62,7 +62,7 @@ char caesar(char letter, int k)
         // if goes around the alphabet
         else 
         {
-            letter = (letter + k - 90 + 65 - 1);
+            letter = letter + k - 26;
         }
     }
     // if char is in lowercase
@@ -74,7 +74,7 @@ char caesar(char letter, int k)
         }
         else
         {
-            letter = letter + k - 122 + 97 - 1;
+            letter = letter + k - 26;
         }
     }
     return letter;
