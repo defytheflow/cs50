@@ -40,7 +40,7 @@ int main(int argc, string argv[])
             // if goes around the alphabet
             else 
             {
-                message[i] = (message[i] + k - 26);
+                message[i] = message[i] + k - 26;
             }
         }
         // if char is in lowercase
