@@ -1,0 +1,50 @@
+
+body {
+    background-color: black;
+}
+
+main {
+    color: white;
+    margin-left: 20px;
+}
+
+main.me {
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    color: #FF1493;
+}
+
+table {
+    margin-top: 20px;
+    width: 40%;
+    border: 1px solid white;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+li.sports {
+    font-size: 1.4em;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+}
+
+strong {
+    color: green;
+}
+
+.nav-link {
+    font-size: 1.5em;
+    color: #FF1493;
+}
+
+.nav-item {
+    margin: 0 20px 20px 20px;
+}
