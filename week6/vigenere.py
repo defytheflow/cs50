@@ -15,10 +15,10 @@ def check_args() -> bool:
         keyword = sys.argv[1]
         for ch in keyword:
             if ch.isdigit():
-                print("Usage caesar.py keyword")
+                print("Usage viginere.py keyword")
                 sys.exit(1)
     else:
-        print("Usage caesar.py keyword")
+        print("Usage vigenere.py keyword")
         sys.exit(1)
 
 
