@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="John Smith">
+        <label for="nick">Nickname</label>
+        <input type="text" id="nick" name="nick" placeholder="johny98">
+
+        <p>Please, select the language you liked the most:</p>
+        <input type="radio" name="lang" value="c" checked> C<br>
+        <input type="radio" name="lang" value="python"> Python<br>
+        <input type="radio" name="lang" value="javascript"> JavaScript<br>
+
+        <p>How would you estimate CS50 course?</p>
+        <select name="assessment">
+            <option value="great">Great</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="bad">Bad</option>
+        </select>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('#name').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('#nick').value) {
+                alert('You must provide your nickname!');
+                return false;
+            }
+            else if (!document.querySelector('#lang').value) {
+                alert('You must provide your favorite language!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('You must provide your how your feelings about the course!');
+                return false;
+            }
+            return true;
+        };
+
+    </script>
+
+{% endblock %}

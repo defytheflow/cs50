@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/components/alerts/ -->
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Nickname</th>
+            <th>Favorite Language</th>
+            <th>Assessment of CS50 Course</th>
+        </tr>
+        {% for survey in surveys %}
+            <tr>
+                <td>{{ survey[0] | title }}</td>
+                <td>{{ survey[1] }}</td>
+                <td>{{ survey[2] | capitalize}}</td>
+                <td>{{ survey[3] | capitalize}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
