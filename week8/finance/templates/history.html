@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+<p>Transactions</p>
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for trans in transactions %}
+        <tr>
+            <td>{{ trans["type"] }}</td>
+            <td>{{ trans["symbol"]  }}</td>
+            <td>${{ trans["price"] }}</td>
+            <td>{{ trans["shares"] }}</td>
+            <td>{{ trans["date"] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

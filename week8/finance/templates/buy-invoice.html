@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Invoice
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Name</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Price</th>
+      <th scope="col">TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ data['symbol'] }}</th>
+      <td>{{ data['name'] }}</td>
+      <td>{{ data['shares'] }}</td>
+      <td>{{ data['price'] }}</td>
+      <td>{{ data['total'] }}</td>
+    </tr>
+    <tr>
+      <tD>CASH</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{{ data['cash'] }}</td>
+    </tr>
+    <tr>
+      <td></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <th>{{ data['left'] }}</th>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
